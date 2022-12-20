@@ -7,12 +7,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Header />
+      
       <BrowserRouter>
-        <Routes>
+      <Header />
+      <div className="instagram-container">
+      <Routes>
           <Route path="/" element={<Feed />} />
           <Route path="/:userName" element={<Profile />} />
         </Routes>
+      </div>
       </BrowserRouter>
     </div>
   );
